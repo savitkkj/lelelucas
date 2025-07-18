@@ -72,34 +72,27 @@
     </p>
   </div>
 
-  <div class="container" id="passwordContainer">
+  <div id="passwordContainer">
     <h1>💖 Nosso Amor 💖</h1>
     <p>Digite a senha para acessar:</p>
-    <input type="password" id="password" placeholder="Senha">
+    <input type="password" id="password" placeholder="Digite a senha" />
     <br>
-    <button onclick="checkPassword()">Entrar</button>
+   <button onclick="checkPassword()">Entrar</button>
   </div>
 
 <audio id="bg-music" loop>
-  <source src="https://lucas-site.pages.dev/tackle.mp3" type="audio/mp3">
+  <source src="https://lucas-site.pages.dev/tackle.mp3" type="audio/mp3" />
   Seu navegador não suporta áudio.
 </audio>
 
 <script>
-  // Só tenta tocar quando o usuário interagir (por política de autoplay)
-  document.querySelector("button").addEventListener("click", function() {
-    const music = document.getElementById("bg-music");
-    music.play().catch((e) => {
-      console.warn("Autoplay bloqueado:", e);
-    });
-  });
-
   function checkPassword() {
     const input = document.getElementById('password').value;
     if (input === "1802") {
       document.getElementById('passwordContainer').style.display = "none";
       document.getElementById('protectedContent').style.display = "block";
-      document.getElementById('bg-music').play();
+      const music = document.getElementById('bg-music');
+      music.play().catch(e => console.warn("Erro ao tocar música:", e));
     } else {
       alert("Senha incorreta!");
     }
