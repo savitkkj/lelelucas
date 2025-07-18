@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nosso Amor</title>
+  <title>i luv you so much</title>
   <style>
     body {
       margin: 0;
@@ -86,17 +86,17 @@
 </audio>
 
 <script>
-  function checkPassword() {
-    const input = document.getElementById('password').value;
-    if (input === "1802") {
-      document.getElementById('passwordContainer').style.display = "none";
-      document.getElementById('protectedContent').style.display = "block";
-      const music = document.getElementById('bg-music');
-      music.play().catch(e => console.warn("Erro ao tocar música:", e));
-    } else {
-      alert("Senha incorreta!");
+    function checkPassword() {
+      const input = document.getElementById('password').value;
+      if (input === "1802") {
+        document.getElementById('passwordContainer').style.display = "none";
+        document.getElementById('protectedContent').style.display = "block";
+        const music = document.getElementById('bg-music');
+        music.play().catch(e => console.warn("Autoplay bloqueado:", e));
+      } else {
+        alert("Senha incorreta!");
+      }
     }
-  }
-</script>
+  </script>
 </body>
 </html>
