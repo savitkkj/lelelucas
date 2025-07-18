@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucas & Leona - 6 Meses</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+      color: #003049;
+      padding: 40px;
+      text-align: center;
+    }
+    .card {
+      background-color: white;
+      max-width: 600px;
+      margin: 0 auto;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #0077b6;
+      font-size: 2.5em;
+    }
+    p {
+      font-size: 1.2em;
+      margin: 20px 0;
+    }
+    .footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #666;
+    }
+    .hidden {
+      display: none;
+    }
+    input[type="password"] {
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #aaa;
+      font-size: 1em;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #0077b6;
+      color: white;
+      border-radius: 10px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="password-screen">
+    <h2>Digite a senha para acessar</h2>
+    <input type="password" id="password" placeholder="Senha">
+    <br>
+    <button onclick="checkPassword()">Entrar</button>
+  </div>
+
+  <div id="main-content" class="hidden">
+    <div class="card">
+      <h1>Lucas & Leona 💙</h1>
+      <p>Oi minha princesinha, se você está lendo isso, parabéns, pois nós acabamos de completar mais um mês juntos, e ainda há o resto da vida pela frente. Obrigado por ser essa mulher incrível comigo, gentil, carinhosa, fofa, atenciosa. Eu te admiro muito, nunca tive uma relação tão saudável quanto essa, é como um sonho pra mim, sério. Continue sendo essa mulher maravilhosa de sempre, nunca deixe de ser você mesma, eu estarei ao seu lado toda vez que precisar, pode contar comigo viu? Eu te amo muito, minha pitica, saudades &lt;3</p>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2TWurK2nPLfaXWykKQySG4?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <p class="footer">Site feito com amor 💙 para comemorar nossos 6 meses</p>
+    </div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      var input = document.getElementById('password').value;
+      if (input === '1802') {
+        document.getElementById('password-screen').classList.add('hidden');
+        document.getElementById('main-content').classList.remove('hidden');
+      } else {
+        alert('Senha incorreta!');
+      }
+    }
+  </script>
+</body>
+</html>
