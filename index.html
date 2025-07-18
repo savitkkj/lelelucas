@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosso Amor</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #1c3c74;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+      background-image: radial-gradient(ellipse at center, #1c3c74 0%, #0d1b2a 100%);
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      white-space: pre-wrap;
+    }
+
+    .password-protected {
+      display: none;
+      margin-top: 20px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      margin-top: 20px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 10px;
+      background-color: #3366cc;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="protectedContent" style="display: none;">
+    <h1>Lucas & Leona 💙</h1>
+    <p>
+      oi minha princesinha, se você está lendo isso, parabéns, pois nós acabamos de completar mais um mês juntos, e ainda há o resto da vida pela frente, obrigado por ser essa mulher incrível cmg, gentil, carinhosa, fofa, atenciosa, eu te admiro muito, nunca tive uma relação tão saudável quanto essa, é como um sonho pra mim, sério. continue sendo essa mulher maravilhosa de sempre, nunca deixe de ser você mesma, eu estarei ao seu lado toda vez que precisar, pode contar comigo viu? eu te amo muito minha pitica, saudades &lt;3
+    </p>
+  </div>
+
+  <div class="container" id="passwordContainer">
+    <h1>💖 Nosso Amor 💖</h1>
+    <p>Digite a senha para acessar:</p>
+    <input type="password" id="password" placeholder="Senha">
+    <br>
+    <button onclick="checkPassword()">Entrar</button>
+  </div>
+
+  <audio autoplay loop>
+    <source src="https://lucas-site.pages.dev/tackle.mp3" type="audio/mp3">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById('password').value;
+      if (input === "1802") {
+        document.getElementById('passwordContainer').style.display = "none";
+        document.getElementById('protectedContent').style.display = "block";
+      } else {
+        alert("Senha incorreta!");
+      }
+    }
+  </script>
+</body>
+</html>
